@@ -35,7 +35,7 @@ export default function Home() {
         setResults(sortedResults);
       }
     } catch (err) {
-      setError('Failed to fetch results. Please try again.');
+      setError('Failed to fetch results. Please try again.' + err);
       setResults([]);
     } finally {
       setLoading(false);

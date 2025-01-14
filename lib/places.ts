@@ -1,5 +1,5 @@
 // lib/places.ts
-import { SearchParams, SearchResponse } from '@/types/places';
+import { Place, SearchParams, SearchResponse } from '@/types/places';
 
 export async function searchPlaces({ city, category }: SearchParams): Promise<SearchResponse> {
   try {
@@ -98,7 +98,7 @@ export async function searchPlaces({ city, category }: SearchParams): Promise<Se
     }
 
     return {
-  results: placesData.results.map((place: any) => ({
+  results: placesData.results.map((place: Place) => ({
     name: place.name,
     rating: place.rating,
     vicinity: place.vicinity,

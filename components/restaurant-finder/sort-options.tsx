@@ -1,5 +1,4 @@
-// components/restaurant-finder/sort-options.tsx
-import { Select } from "@/components/ui/select"
+
 
 interface SortOptionsProps {
   onSort: (value: string) => void;

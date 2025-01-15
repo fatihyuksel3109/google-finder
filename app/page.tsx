@@ -34,8 +34,8 @@ export default function Home() {
         const sortedResults = sortResults(data.results, sortOption);
         setResults(sortedResults);
       }
-    } catch (err) {
-      setError('Failed to fetch results. Please try again.' + err);
+    } catch  {
+      setError('Failed to fetch results. Please try again.');
       setResults([]);
     } finally {
       setLoading(false);
